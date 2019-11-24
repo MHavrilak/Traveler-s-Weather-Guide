@@ -5,9 +5,8 @@
 }
 
 #main {
-    float: right;
-    border-block-width: 1px;
-    border-block-color: black;
+    border:solid 3px #000 !important;
+   
 }
 
 
@@ -24,7 +23,6 @@
 }
 
 .main {
-    float:right;
     border-block-width: 1px;
     border-block-color: black;
 }
