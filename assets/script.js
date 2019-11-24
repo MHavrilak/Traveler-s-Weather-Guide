@@ -3,7 +3,7 @@ $(document).ready(function(){
 
  
 
-var city = "";
+var city = $("#main");
 var date = "";
 var icon = ""
 var temp = ""
