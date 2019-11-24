@@ -12,23 +12,22 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-3 col-9">
+    
             <nav class="navbar navbar-light bg-light">
                 <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
             </nav>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-4 col-lg-8">
-                        <aside id="search">
+                            <form action="text" id="search-form">
                             <h3>Search For A City</h3>
-                            <form action="text">
+                           
                                 <input type="text">
-                                <button id="search" onclick="function(updateDOM) class=" btn">Search</button>
+                                <button id="search" onclick=function(data) class="btn">Search</button>
                             </form>
-                        </aside>
-                        <div class="container-fluid" id="main">
-                            <h1 id="city">Baltimore</h1>
+                       
+                        <div id="main">
+                            <h1 id="city">""</h1>
                             <img src="" id="icon">
                             <ol>
                                 <li>Temperature:</li>

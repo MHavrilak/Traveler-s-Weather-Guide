@@ -11,14 +11,14 @@ var humidty = ""
 var winSpd = ""
 var uvIndx = ""
 
-// Weather API
+// Weather API for current weather
 $(document).ready(function) {
 
   function weather() {
     var queryURL = "api.openweathermap.org/data/2.5/forecast?id=524901" + weather + "&apikey=4383960b162385ee11decc2446137670";
 
     $.get.JSON(URL, function(data) {
-        console.log("data");
+        console.log(data);
         updateDOM("data");
     }
   }

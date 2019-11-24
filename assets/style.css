@@ -1,17 +1,17 @@
 .navbar {
-    text-align: center;
+    text-align: center !important;
     background-color: rgb(71, 62, 62);
     max-width: 100;
 }
 
 #main {
-    float: left;
+    float: right;
     border-block-width: 1px;
     border-block-color: black;
 }
 
 
-#search {
+#search-form {
     float: left;
 }
 
@@ -25,6 +25,8 @@
 
 .main {
     float:right;
+    border-block-width: 1px;
+    border-block-color: black;
 }
 
 #daysrow {
