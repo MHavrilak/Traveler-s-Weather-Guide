@@ -1,0 +1,46 @@
+.navbar {
+    text-align: center;
+    background-color: rgb(71, 62, 62);
+    max-width: 100;
+}
+
+#main {
+    float: left;
+    border-block-width: 1px;
+    border-block-color: black;
+}
+
+
+#search {
+    float: left;
+}
+
+.btn {
+    background-color: blue;
+}
+
+.container-fluid {
+    border:solid 3px grey;
+}
+
+.main {
+    float:right;
+}
+
+#daysrow {
+   display: -webkit-inline-box;
+   column-gap: 50px;
+}
+
+.col-3 {
+    float: right;
+    padding: 20px;
+    margin-right: 5px;
+    
+}
+
+#date1, #date2, #date3, #date4, #date5 {
+    float:right;
+    padding:80px;
+    background-color: blue;
+}
