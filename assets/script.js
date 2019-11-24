@@ -14,7 +14,8 @@ $( document ).ready(function() {
 
 // Weather API for current weather
 function getWeatherURL() {
-  var queryURL = "api.openweathermap.org/data/2.5/forecast?q= " + search + '&units=imperial&appid=' + apiKey;
+  searchtext.value="baltimore";
+  var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q= " + searchtext.value + '&units=imperial&appid=' + apiKey;
   console.log(queryURL);
   
   $.ajax({
@@ -22,7 +23,13 @@ function getWeatherURL() {
     method: "GET",
     crossDomain: true
   }).then(function(r){
-    console.log(r.data.d);
+    console.log(r.list.length);
+    console.log(r);
+
+    for (var i=0; i < r.list.length; i++) {
+      
+    }
+
   })
 };
 
