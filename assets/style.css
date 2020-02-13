@@ -6,6 +6,7 @@
 
 #main {
     border:solid 3px #000 !important;
+    background-color: silver;
    
 }
 
@@ -21,17 +22,19 @@
 
 .container-fluid {
     border:solid 3px grey;
-    background-color: mediumaquamarine;
+   
 }
 
 .main {
     border-block-width: 1px;
-    border-block-color: black;
+   
 }
 
 .weathercard {
     padding:20px;
-    background-color: blue;
+    background-color: lightblue;
+    border: black
+    
 }
 
-.mikeheader {font:15pt verdana; color:black; padding:15px}
+.fiveday7 {font:15pt verdana; color:black; padding:15px}
