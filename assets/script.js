@@ -1,3 +1,6 @@
+$(document).ready(function () {
+  console.log("ready!");
+
 var weather = "Havrilak";
 var date = "";
 var icon = "";
@@ -9,11 +12,12 @@ var apiKey = "4383960b162385ee11decc2446137670";
 var searchtext = $('#searchtext')
 var lat = "";
 var lon = "";
-
-$(document).ready(function () {
-  console.log("ready!");
+var history = document.querySelector("#search");
+var historyList = [];
   // getWeatherURL()
-});
+  renderHistory()
+
+history.onclick = getWeatherURL
 
 // Weather API for current weather
 function getWeatherURL() {
@@ -31,7 +35,10 @@ function getWeatherURL() {
       crossDomain: true
     }).then(function (r) {
       console.log(r.list.length);
+      historyList.push(searchtext.val())
       console.log(r);
+      localStorage.setItem("searchHistory", JSON.stringify(historyList));
+      renderHistory()
   
       for (var i = 0; i < 5; i++) {
         var weatherCard = $(".weathercard")[i];
@@ -75,11 +82,47 @@ function getWeatherURL() {
   } else {
     alert("Please Enter a City!");
   }
-  
-  
-  
 
+  
 };
+ // Store and get search history from local storage
+ function renderHistory() {
+
+  // searchText.innerHTML = "";
+
+historyList = JSON.parse(localStorage.getItem("searchHistory")) ||  [];
+
+var ul = $("#search-history ul")
+ul.empty()
+
+  for (var i = 0; i < historyList.length; i++) {
+    var historyAppend = historyList[i];
+
+    var li = document.createElement("li")
+    li.textContent = historyAppend;
+    // li.setAttribute("search")
+
+    
+
+    ul.append(li);
+    console.log(li)
+  
+  }
+
+
+  // function append() {
+  //   var appendHistory = JSON.parse(localStorage.getItem("search-history"));
+
+  //   if (appendHistory !== null) {
+  //     searchHistory = appendHistory;
+  //   }
+
+  //   append();
+  // }
+
+}
+});
+  
 
 
 
